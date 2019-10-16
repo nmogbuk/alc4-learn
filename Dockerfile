@@ -13,6 +13,7 @@ RUN mkdir -p /home/ubuntu/app
 WORKDIR /home/ubuntu/app
 ADD . /home/ubuntu/app
 
+RUN npm install
 RUN npm run build
 RUN npm install -g serve
 RUN chown -R ubuntu:ubuntu /home/ubuntu
